@@ -36,11 +36,11 @@ app.post("/", function(req, res) {
 
   const jsonData = JSON.stringify(data); //converting the object into JSON in order to be sent
 
-  const url = "https://us4.api.mailchimp.com/3.0/lists/89cecf8678" //us + last number of key + API EndPonit + id list
+  const url = "https://us4.api.mailchimp.com/3.0/lists/898" //us + last number of key + API EndPonit + id list
 
   const options = { //to make the post and aunthentification, read http node module and its methods
     method: "POST",
-    auth: "aza:58ea2cf979acab4fd8b047dcfdd3b946-us4" //also read api doc
+    auth: "aza:58ea2cf979-us4" //also read api doc
   }
 
   const request = https.request(url, options, function(response) {
@@ -67,6 +67,6 @@ app.listen(process.env.PORT || 3000, function() {
   console.log("server is running on port 3000");
 })
 
-// APi key 58ea2cf979acab4fd8b047dcfdd3b946-us4
-//unique id 89cecf8678
+// APi key 5-us4
+//unique id 8978
 //https://$API_SERVER.api.mailchimp.com/3.0/lists
